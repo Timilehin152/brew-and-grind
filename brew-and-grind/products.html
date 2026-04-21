@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Brew &amp; Grind</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Brew <span>&amp;</span> Grind</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Menu</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="suggestions.html">Suggestions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="badge">Members Only</span>
+    <h1 style="margin-top:1rem;">Our Menu</h1>
+    <div class="accent-line"></div>
+    <p>Please log in to view our full menu.</p>
+  </div>
+
+  <div class="container">
+
+    <!-- LOGIN SECTION -->
+    <div id="login-section" style="max-width:420px; margin:0 auto;">
+      <div class="alert alert-info" style="margin-bottom:1.5rem;">
+        &#128274; This page is for registered members. Use <strong>guest / brew2024</strong> to preview.
+      </div>
+      <div id="login-message" class="alert" style="display:none;"></div>
+      <div class="card">
+        <h3 style="margin-bottom:1.25rem;">Member Login</h3>
+        <form id="login-form" action="#" method="post">
+          <div class="form-group">
+            <label for="loginUser">Username</label>
+            <input type="text" id="loginUser" name="loginUser" placeholder="Enter username" />
+          </div>
+          <div class="form-group">
+            <label for="loginPass">Password</label>
+            <input type="password" id="loginPass" name="loginPass" placeholder="Enter password" />
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Log In</button>
+        </form>
+        <p style="text-align:center; margin-top:1rem; font-size:0.85rem;">
+          No account? <a href="register.html">Register here</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- MENU SECTION (hidden until login) -->
+    <div id="menu-section" style="display:none;">
+
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:2rem;">
+        <h2>Full Menu Catalog</h2>
+        <button onclick="logout()" class="btn btn-outline" style="font-size:0.8rem;">Log Out</button>
+      </div>
+
+      <!-- Audio Player -->
+      <div class="card" style="margin-bottom:2rem; text-align:center;">
+        <h4 style="margin-bottom:0.75rem;">&#9835; Cafe Ambience</h4>
+        <p style="margin-bottom:1rem; font-size:0.85rem;">Enjoy our signature cafe soundtrack while you browse.</p>
+        <audio controls style="width:100%; max-width:500px;">
+          <source src="media/cafe-ambience.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="grid-2" style="margin-bottom:2.5rem;">
+
+        <div class="card">
+          <img src="images/espresso.jpg" alt="Single Origin Espresso" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:1rem;" />
+          <span class="badge">Hot Drinks</span>
+          <h3 style="margin-top:0.75rem;">Single Origin Espresso</h3>
+          <p style="margin:0.5rem 0;">A bold, rich shot from Blue Mountain coffee beans. Full-bodied with a smooth caramel finish.</p>
+          <p style="color:var(--accent); font-weight:600; font-size:1.1rem;">J$450</p>
+        </div>
+
+        <div class="card">
+          <img src="images/cold-brew.jpg" alt="Cold Brew Reserve" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:1rem;" />
+          <span class="badge">Cold Drinks</span>
+          <h3 style="margin-top:0.75rem;">Cold Brew Reserve</h3>
+          <p style="margin:0.5rem 0;">Steeped for 18 hours. Low-acid, silky smooth, and served over hand-cut ice.</p>
+          <p style="color:var(--accent); font-weight:600; font-size:1.1rem;">J$650</p>
+        </div>
+
+        <div class="card">
+          <img src="images/chai-latte.jpg" alt="Spiced Chai Latte" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:1rem;" />
+          <span class="badge">Specialty</span>
+          <h3 style="margin-top:0.75rem;">Spiced Chai Latte</h3>
+          <p style="margin:0.5rem 0;">Caribbean-spiced chai with cinnamon, ginger, and allspice. Served hot or iced.</p>
+          <p style="color:var(--accent); font-weight:600; font-size:1.1rem;">J$550</p>
+        </div>
+
+        <div class="card">
+          <img src="images/croissant.jpg" alt="Butter Croissant" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:1rem;" />
+          <span class="badge">Pastries</span>
+          <h3 style="margin-top:0.75rem;">Butter Croissant</h3>
+          <p style="margin:0.5rem 0;">Freshly baked daily. Flaky, buttery layers with an optional almond or chocolate filling.</p>
+          <p style="color:var(--accent); font-weight:600; font-size:1.1rem;">J$380</p>
+        </div>
+
+      </div>
+
+      <!-- Promo Video -->
+      <div class="card" style="text-align:center;">
+        <h4 style="margin-bottom:0.75rem;">&#127916; Behind The Brew</h4>
+        <p style="margin-bottom:1rem; font-size:0.85rem;">A look inside how we craft every cup at Brew &amp; Grind.</p>
+        <video controls width="100%" style="max-width:640px; border-radius:8px;">
+          <source src="media/brew-promo.mp4" type="video/mp4" />
+          Your browser does not support the video element.
+        </video>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Brew <span>&amp;</span> Grind</div>
+    <p class="footer-tagline">Premium Coffee. Jamaican Soul.</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Menu</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="suggestions.html">Suggestions</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="https://www.facebook.com" target="_blank" class="social-btn">&#x1F4D8; Facebook</a>
+      <a href="https://www.youtube.com" target="_blank" class="social-btn">&#x25B6; YouTube</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Brew &amp; Grind. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

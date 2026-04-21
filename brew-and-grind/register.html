@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — Brew &amp; Grind</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">Brew <span>&amp;</span> Grind</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html">Menu</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="suggestions.html">Suggestions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="badge">Join The Club</span>
+    <h1 style="margin-top:1rem;">Customer Registration</h1>
+    <div class="accent-line"></div>
+    <p>Create your account and start earning loyalty points today.</p>
+  </div>
+
+  <div class="container">
+    <div style="max-width: 680px; margin: 0 auto;">
+
+      <div id="reg-message" class="alert" style="display:none;"></div>
+
+      <div class="card">
+        <form id="registration-form" action="#" method="post">
+
+          <!-- Name Row -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name <span class="required-star">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="e.g. Marcus" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name <span class="required-star">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="e.g. Reid" required />
+            </div>
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value="">-- Select --</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+              <option value="prefer_not">Prefer not to say</option>
+            </select>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address <span class="required-star">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          </div>
+
+          <!-- Address -->
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="123 Main Street, Kingston" />
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label for="phone">Contact Number <span class="required-star">*</span></label>
+            <input type="text" id="phone" name="phone" placeholder="8765550000" />
+          </div>
+
+          <!-- Date Fields -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="dob">Date of Birth <span class="required-star">*</span></label>
+              <input type="date" id="dob" name="dob" />
+            </div>
+            <div class="form-group">
+              <label for="regDate">Registration Date <span class="required-star">*</span></label>
+              <input type="date" id="regDate" name="regDate" />
+            </div>
+          </div>
+
+          <!-- Branches (populated via JS loop) -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="branch1">Nearest Branch <span class="required-star">*</span></label>
+              <select id="branch1" name="branch1" class="branch-select">
+                <option value="">-- Select Branch --</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="branch2">Second Nearest Branch <span class="required-star">*</span></label>
+              <select id="branch2" name="branch2" class="branch-select">
+                <option value="">-- Select Branch --</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Read Only Field -->
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" value="Brew &amp; Grind Jamaica" readonly
+              style="opacity:0.5; cursor:not-allowed;" />
+          </div>
+
+          <!-- Disabled Promo Field -->
+          <div class="form-group">
+            <label for="promoCode">Promo Code</label>
+            <input type="text" id="promoCode" name="promoCode" placeholder="Not available yet" disabled
+              style="opacity:0.4; cursor:not-allowed;" />
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">
+            Create My Account
+          </button>
+
+        </form>
+      </div>
+
+      <p class="text-center mt-2" style="font-size:0.85rem; color:var(--text-muted);">
+        Fields marked <span class="required-star">*</span> are required.
+      </p>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">Brew <span>&amp;</span> Grind</div>
+    <p class="footer-tagline">Premium Coffee. Jamaican Soul.</p>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Menu</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="suggestions.html">Suggestions</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="https://www.facebook.com" target="_blank" class="social-btn">&#x1F4D8; Facebook</a>
+      <a href="https://www.youtube.com" target="_blank" class="social-btn">&#x25B6; YouTube</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Brew &amp; Grind. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
